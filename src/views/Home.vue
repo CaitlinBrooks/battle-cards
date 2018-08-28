@@ -8,8 +8,8 @@
 
 <script>
   // @ is an alias to /src
-  import PlayerHand from '@/components/PlayerHand.vue'
   import EnemyHand from '@/components/EnemyHand.vue'
+  import PlayerHand from '@/components/PlayerHand.vue'
 
   export default {
     name: 'home',
