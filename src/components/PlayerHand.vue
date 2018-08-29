@@ -1,6 +1,7 @@
 <template>
   <div class="Home">
     <h1>PLAYER HAND</h1>
+    {{player.name}}
   </div>
 </template>
 
@@ -9,9 +10,33 @@
     name: 'PlayerHand',
     props: {
 
+    },
+    data() {
+      return {
+
+      }
+    },
+    computed: {
+      player() {
+        if (this.$store.state.game.id) {
+          return this.$store.state.game.players[0]
+        }
+        return {}
+      }
     }
   }
 </script>
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <button @click="newGame">New Game</button>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <EnemyHand />
     <PlayerHand />
@@ -16,6 +17,11 @@
     components: {
       PlayerHand,
       EnemyHand
+    },
+    methods: {
+      newGame() {
+        this.$store.dispatch('newGame')
+      }
     }
   }
 </script>
