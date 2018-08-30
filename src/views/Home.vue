@@ -3,7 +3,7 @@
     <button @click="newGame">New Game</button>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <EnemyHand />
-    <PlayerHand />
+    <PlayerHand :func="setPlayerCard" />
   </div>
 </template>
 
@@ -18,9 +18,23 @@
       PlayerHand,
       EnemyHand
     },
+    data() {
+      return {
+        attack: {
+          playerId: '',
+          playerCardId: '',
+          opponentId: '',
+          opponentCardId: ''
+        }
+      }
+    },
     methods: {
       newGame() {
         this.$store.dispatch('newGame')
+      },
+      setPlayerCard(pId, pcId) {
+        this.attack.playerId = pId
+        this.attack.playerCardId = pcId
       }
       //   getCards() {
       //     this.$store.dispatch('getCards')

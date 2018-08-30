@@ -23,24 +23,30 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    newGame({ commit, dispatch }) {
+    newGame({ commit }) {
       battleApi.post('').then(res => {
         console.log('it works', res)
         commit('setGame', res.data)
       })
-      // getCards({ commit, dispatch }) {
-      //   battleApi.post('').then(res => {
-      //     console.log('it works', res)
-      //     commit('getCards', res.data)
-      //   })
-      // }
+    },
+    attack({ commit }, attack) {
+      battleApi.put('', attack).then(res => {
+        console.log('attack came back', res)
+      })
     }
-
-    //   search({ commit, dispatch ), newGame) {
-    //     battleApi.get(newGame)
-    //     .then(res => {
-    //       commit('setGame', res.data.results)
-    //     })
-    //   }
+    // getCards({ commit, dispatch }) {
+    //   battleApi.post('').then(res => {
+    //     console.log('it works', res)
+    //     commit('getCards', res.data)
+    //   })
+    // }
   }
-})
+
+  //   search({ commit, dispatch ), newGame) {
+  //     battleApi.get(newGame)
+  //     .then(res => {
+  //       commit('setGame', res.data.results)
+  //     })
+  //   }
+}
+)
