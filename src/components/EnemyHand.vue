@@ -2,6 +2,12 @@
   <div class="Home">
     <h1>ENEMY HAND</h1>
     {{opponent.name}}
+    <div class="row">
+
+      <div class="col-4" v-for="card in opponent.hand">
+        {{card}}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,7 +25,7 @@
     computed: {
       opponent() {
         if (this.$store.state.game.id) {
-          return this.$store.state.game.opponents[1]
+          return this.$store.state.game.players[1]
         }
         return {}
       }

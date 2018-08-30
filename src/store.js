@@ -28,6 +28,12 @@ export default new Vuex.Store({
         console.log('it works', res)
         commit('setGame', res.data)
       })
+      // getCards({ commit, dispatch }) {
+      //   battleApi.post('').then(res => {
+      //     console.log('it works', res)
+      //     commit('getCards', res.data)
+      //   })
+      // }
     }
 
     //   search({ commit, dispatch ), newGame) {

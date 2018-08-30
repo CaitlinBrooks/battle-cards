@@ -2,6 +2,12 @@
   <div class="Home">
     <h1>PLAYER HAND</h1>
     {{player.name}}
+    <div class="row">
+
+      <div class="col-4" v-for="card in player.hand">
+        {{card}}
+      </div>
+    </div>
   </div>
 </template>
 

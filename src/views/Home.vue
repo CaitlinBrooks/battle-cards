@@ -22,6 +22,9 @@
       newGame() {
         this.$store.dispatch('newGame')
       }
+      //   getCards() {
+      //     this.$store.dispatch('getCards')
+      // }
     }
   }
 </script>
