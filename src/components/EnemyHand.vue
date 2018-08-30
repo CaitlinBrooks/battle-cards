@@ -4,7 +4,7 @@
     {{opponent.name}}
     <div class="row">
 
-      <div class="col-4" v-for="card in opponent.hand" @click="func(opponent.id, card.id)">
+      <div class="col-4" v-for="card in opponent.hand" @click="attackInfo(opponent.id, card.id)">
         {{card.name}}
         <img :src="card.img">
       </div>
@@ -16,7 +16,7 @@
   export default {
     name: 'EnemyHand',
     props: {
-      func: {
+      attackInfo: {
         type: Function, required: true
       }
     },

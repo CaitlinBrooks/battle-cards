@@ -2,8 +2,8 @@
   <div class="home">
     <button @click="newGame">New Game</button>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <EnemyHand :func="setPlayerCard" />
-    <PlayerHand :func="setPlayerCard" />
+    <EnemyHand :attackInfo="setEnemyCard" />
+    <PlayerHand :attackInfo="setPlayerCard" />
   </div>
 </template>
 
