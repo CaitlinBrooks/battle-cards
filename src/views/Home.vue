@@ -2,7 +2,7 @@
   <div class="home">
     <button @click="newGame">New Game</button>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <EnemyHand />
+    <EnemyHand :func="setPlayerCard" />
     <PlayerHand :func="setPlayerCard" />
   </div>
 </template>
@@ -35,6 +35,10 @@
       setPlayerCard(pId, pcId) {
         this.attack.playerId = pId
         this.attack.playerCardId = pcId
+      },
+      setEnemyCard(oId, ocId) {
+        this.attack.opponentId = oId
+        this.attack.opponentCardId = ocId
       }
       //   getCards() {
       //     this.$store.dispatch('getCards')
