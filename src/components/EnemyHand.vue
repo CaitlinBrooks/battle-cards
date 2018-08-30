@@ -9,6 +9,19 @@
     name: 'EnemyHand',
     props: {
 
+    },
+    data() {
+      return {
+
+      }
+    },
+    computed: {
+      opponent() {
+        if (this.$store.state.game.id) {
+          return this.$store.state.game.opponents[1]
+        }
+        return {}
+      }
     }
   }
 </script>
