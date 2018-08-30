@@ -18,18 +18,6 @@
       PlayerHand,
       EnemyHand
     },
-    data() {
-      return {
-        PlayerHand: {},
-        EnemyHand: {},
-        newGame: {
-          Playername: "",
-          opponents: 1,
-          set: 5
-        }
-
-      }
-    },
     methods: {
       newGame() {
         this.$store.dispatch('newGame')

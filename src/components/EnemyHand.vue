@@ -1,6 +1,7 @@
 <template>
   <div class="Home">
     <h1>ENEMY HAND</h1>
+    {{opponent.name}}
   </div>
 </template>
 
