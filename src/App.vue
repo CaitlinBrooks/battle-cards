@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div class="mt-5" id="app">
 
-    <router-link to="/">Game</router-link>
+    <!-- <router-link to="/">Game</router-link> -->
 
     <router-view/>
   </div>

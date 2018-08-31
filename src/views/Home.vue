@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <button @click="newGame">New Game</button>
+    <button type=button class="btn btn-primary" @click="newGame">New Game</button>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <EnemyHand :attackInfo="setEnemyCard" />
-    <button @click="">Attack!</button>
+    <button type=button class="btn btn-success" @click="">Battle</button>
     <PlayerHand :attackInfo="setPlayerCard" />
   </div>
 </template>

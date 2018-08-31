@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-2" v-for="card in player.hand" @click="attackInfo(player.id, card.id)">
         {{card.name}}
-        <img :src="card.img" width="200" height="200">
+        <img :src="card.img" width="100" height="100">
       </div>
     </div>
   </div>
