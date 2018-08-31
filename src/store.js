@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import router from './router'
 
 Vue.use(Vuex)
 
@@ -29,9 +30,10 @@ export default new Vuex.Store({
         commit('setGame', res.data)
       })
     },
-    attack({ commit }, attack) {
-      battleApi.put('', attack).then(res => {
+    attack({ commit }, attackInfo) {
+      battleApi.put('', attackInfo).then(res => {
         console.log('attack came back', res)
+        commit('setGame', res.data)
       })
     }
     // getCards({ commit, dispatch }) {
