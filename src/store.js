@@ -30,25 +30,29 @@ export default new Vuex.Store({
         commit('setGame', res.data)
       })
     },
-    attack({ commit }, attackInfo) {
-      battleApi.put('', attackInfo).then(res => {
+    attack({ commit, dispatch, state }, attackInfo) {
+      battleApi.put('/' + state.game.id, attackInfo).then(res => {
         console.log('attack came back', res)
-        commit('setGame', res.data)
+        dispatch('getGame', state.game.id)
       })
+    },
+    getGame({ commit, state }) {
+      battleApi.get('/' + state.game.id).then(res => {
+        console.log('game came back', res)
+        commit('getGame', state.game.id)
+      })
+      // getCards({ commit, dispatch }) {
+      //   battleApi.post('').then(res => {
+      //     console.log('it works', res)
+      //     commit('getCards', res.data)
+      //   })
+      // }
     }
-    // getCards({ commit, dispatch }) {
-    //   battleApi.post('').then(res => {
-    //     console.log('it works', res)
-    //     commit('getCards', res.data)
-    //   })
-    // }
+    //   search({ commit, dispatch ), newGame) {
+    //     battleApi.get(newGame)
+    //     .then(res => {
+    //       commit('setGame', res.data.results)
+    //     })
+    //   }
   }
-
-  //   search({ commit, dispatch ), newGame) {
-  //     battleApi.get(newGame)
-  //     .then(res => {
-  //       commit('setGame', res.data.results)
-  //     })
-  //   }
-}
 )

@@ -3,7 +3,7 @@
     <button type=button class="btn btn-primary" @click="newGame">New Game</button>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <EnemyHand :attackInfo="setEnemyCard" />
-    <button type=button class="btn btn-success" @click="">Battle</button>
+    <button type="button" class="btn btn-success" @click="sendAttack">Battle</button>
     <PlayerHand :attackInfo="setPlayerCard" />
   </div>
 </template>
@@ -42,8 +42,7 @@
         this.attack.opponentCardId = ocId
       },
       sendAttack() {
-        debugger
-        this.$store.dispatch('attack', attackInfo)
+        this.$store.dispatch('attack', this.attack)
       }
       //   getCards() {
       //     this.$store.dispatch('getCards')
