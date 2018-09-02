@@ -30,6 +30,9 @@
           return this.$store.state.game.players[0]
         }
         return {}
+      },
+      playerActiveCard() {
+        return this.$store.state.playerCard
       }
     }
   }
