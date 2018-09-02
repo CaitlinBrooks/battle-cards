@@ -23,6 +23,12 @@ export default new Vuex.Store({
       state.game = data
     }
   },
+  // setPlayerCard(state, playerCard) {
+  //   state.PlayerCard = playerCard
+  // },
+  // setEnemyCard(state, enemyCard) {
+  //   state.EnemyCard = enemyCard
+  // },
   // setPlayerCard(state, player)
   actions: {
     newGame({ commit }) {
