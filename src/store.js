@@ -29,30 +29,31 @@ export default new Vuex.Store({
     },
     setEnemyCard(state, enemyCard) {
       state.enemyCard = enemyCard
-    },
-
-
-    actions: {
-      newGame({ commit }) {
-        battleApi.post('').then(res => {
-          console.log('it works', res)
-          commit('setGame', res.data)
-        })
-      },
-      attack({ commit, dispatch, state }, attackInfo) {
-        battleApi.put('/' + state.game.id, attackInfo).then(res => {
-          console.log('attack came back', res)
-          dispatch('getGame', state.game.id)
-        })
-      },
-      getGame({ commit, state }) {
-        battleApi.get('/' + state.game.id).then(res => {
-          console.log('game came back', res)
-          commit('getGame', state.game.id)
-        })
-      },
-      setPlayerCard({ commit, dispatch }, playerCard) {
-        commit('setPlayerCard', playerCard)
-      }
     }
-  })
+  },
+
+
+  actions: {
+    newGame({ commit }) {
+      battleApi.post('').then(res => {
+        console.log('it works', res)
+        commit('setGame', res.data)
+      })
+    },
+    attack({ commit, dispatch, state }, attackInfo) {
+      battleApi.put('/' + state.game.id, attackInfo).then(res => {
+        console.log('attack came back', res)
+        dispatch('getGame', state.game.id)
+      })
+    },
+    getGame({ commit, state }) {
+      battleApi.get('/' + state.game.id).then(res => {
+        console.log('game came back', res)
+        commit('getGame', state.game.id)
+      })
+    },
+    setPlayerCard({ commit, dispatch }, playerCard) {
+      commit('setPlayerCard', playerCard)
+    }
+  }
+})
