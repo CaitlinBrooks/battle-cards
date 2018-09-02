@@ -47,7 +47,7 @@ export default new Vuex.Store({
       //     commit('getCards', res.data)
       //   })
       // }
-    }
+    },
     //   search({ commit, dispatch ), newGame) {
     //     battleApi.get(newGame)
     //     .then(res => {
@@ -55,4 +55,4 @@ export default new Vuex.Store({
     //     })
     //   }
   }
-)
+})
