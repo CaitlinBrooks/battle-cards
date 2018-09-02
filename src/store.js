@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
-import router from './router'
+// import router from './router'
 
 Vue.use(Vuex)
 
@@ -12,10 +12,10 @@ let battleApi = axios.create({
 
 export default new Vuex.Store({
   state: {
-    players: [],
-    player: {},
-    enemies: [],
-    enemy: {},
+    // players: [],
+    playerCard: {},
+    // enemies: [],
+    enemyCard: {},
     game: {}
   },
   mutations: {
@@ -23,6 +23,7 @@ export default new Vuex.Store({
       state.game = data
     }
   },
+  // setPlayerCard(state, player)
   actions: {
     newGame({ commit }) {
       battleApi.post('').then(res => {
@@ -41,18 +42,6 @@ export default new Vuex.Store({
         console.log('game came back', res)
         commit('getGame', state.game.id)
       })
-      // getCards({ commit, dispatch }) {
-      //   battleApi.post('').then(res => {
-      //     console.log('it works', res)
-      //     commit('getCards', res.data)
-      //   })
-      // }
     },
-    //   search({ commit, dispatch ), newGame) {
-    //     battleApi.get(newGame)
-    //     .then(res => {
-    //       commit('setGame', res.data.results)
-    //     })
-    //   }
   }
 })
