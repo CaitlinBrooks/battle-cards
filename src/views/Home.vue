@@ -15,6 +15,8 @@
 
   export default {
     name: 'home',
+
+
     components: {
       PlayerHand,
       EnemyHand
@@ -29,6 +31,8 @@
         }
       }
     },
+
+
     methods: {
       newGame() {
         this.$store.dispatch('newGame')
@@ -48,13 +52,24 @@
       //     this.$store.dispatch('getCards')
       // }
     },
+
+
     computed: {
       game() {
         return this.$store.state.game
+      },
+      player() {
+        return this.$store.state.game.players[0]
+      },
+      playerCard() {
+        return this.$store.state.playerCard
+      },
+      enemy() {
+        return this.$store.state.game.players[1]
+      },
+      enemyCard() {
+        return this.$store.state.enemyCard
       }
-    },
-    player() {
-
     }
   }
 </script>
