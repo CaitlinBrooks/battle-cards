@@ -47,6 +47,14 @@
       //   getCards() {
       //     this.$store.dispatch('getCards')
       // }
+    },
+    computed: {
+      game() {
+        return this.$store.state.game
+      }
+    },
+    player() {
+
     }
   }
 </script>
