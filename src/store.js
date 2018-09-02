@@ -46,10 +46,10 @@ export default new Vuex.Store({
         dispatch('getGame', state.game.id)
       })
     },
-    getGame({ commit, state }) {
-      battleApi.get('/' + state.game.id).then(res => {
+    getGame({ commit, dispatch }, gameId) {
+      battleApi.get('/' + gameId).then(res => {
         console.log('game came back', res)
-        commit('getGame', state.game.id)
+        commit('setGame', res.data.data)
       })
     },
     flipPlayerCard({ commit, dispatch }, playerCard) {
