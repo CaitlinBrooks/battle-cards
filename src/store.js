@@ -52,8 +52,11 @@ export default new Vuex.Store({
         commit('getGame', state.game.id)
       })
     },
-    setPlayerCard({ commit, dispatch }, playerCard) {
+    flipPlayerCard({ commit, dispatch }, playerCard) {
       commit('setPlayerCard', playerCard)
-    }
+    },
+    flipEnemyCard({ commit, dispatch }, enemyCard) {
+      commit('setEnemyCard', enemyCard)
+    },
   }
 })
