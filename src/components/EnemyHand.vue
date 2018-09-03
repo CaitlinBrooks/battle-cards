@@ -31,6 +31,14 @@
           return this.$store.state.game.players[1]
         }
         return {}
+      },
+      enemyActiveCard() {
+        return this.$store.state.enemyCard
+      }
+    },
+    methods: {
+      flipEnemyCard(playerCard) {
+        this.$store.dispatch('changeEnemyCard', enemyCard)
       }
     }
   }
