@@ -20,9 +20,7 @@
       }
     },
     data() {
-      return {
-
-      }
+      return {}
     },
     computed: {
       player() {
@@ -33,6 +31,11 @@
       },
       playerActiveCard() {
         return this.$store.state.playerCard
+      }
+    },
+    methods: {
+      flipPlayerCard(playerCard) {
+        this.$store.dispatch('changePlayerCard', playerCard)
       }
     }
   }
