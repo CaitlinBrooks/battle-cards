@@ -3,7 +3,7 @@
     <h1>ENEMY HAND</h1>
     {{opponent.name}}
     <div class="row">
-
+      <!-- utilize the flip card function here? @click? Maybe an if else statement? -->
       <div class="col-2" v-for="card in opponent.hand" @click="attackInfo(opponent.id, card.id)">
         {{card.name}} Health: {{card.health}} Attack: {{card.attack}} Defense: {{card.defense}}
         <img :src="card.img" width="100" height="100">
