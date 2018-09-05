@@ -10,3 +10,13 @@
       <h2>Battle Cats Tied!</h2>
     </div>
 </template>
+
+<script>
+  export default {
+    name: "gameFinished",
+    computed: {
+      game() {
+        return this.$store.state.game
+      }
+    }
+  }
