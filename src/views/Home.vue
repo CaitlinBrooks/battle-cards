@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <GameFinished v-if="game.winner" />
     <button type=button class="btn btn-primary" @click="newGame">New Game</button>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <EnemyHand :attackInfo="setEnemyCard" />
@@ -22,7 +23,8 @@
 
     components: {
       PlayerHand,
-      EnemyHand
+      EnemyHand,
+      GameFinished
     },
     data() {
       return {
