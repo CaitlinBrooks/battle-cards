@@ -13,6 +13,7 @@
   // @ is an alias to /src
   import EnemyHand from '@/components/EnemyHand.vue'
   import PlayerHand from '@/components/PlayerHand.vue'
+  // import GameFinished from '@/components/GameFinished.vue'
 
   export default {
     name: 'home',
