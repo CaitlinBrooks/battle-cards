@@ -34,9 +34,9 @@
       }
     },
     methods: {
-      flipPlayerCard(playerCard) {
-        this.$store.dispatch('changePlayerCard', playerCard)
-      }
+      // flipPlayerCard(playerCard) {
+      //   this.$store.dispatch('changePlayerCard', playerCard)
+      // }
     }
   }
 </script>
