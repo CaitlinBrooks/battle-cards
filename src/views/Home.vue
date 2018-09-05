@@ -4,8 +4,9 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <EnemyHand :attackInfo="setEnemyCard" />
     <button type="button" class="btn btn-success" @click="sendAttack">Battle</button>
-    <!-- make a hidden div that shows when the result is true from the game object for winner. -->
     <PlayerHand :attackInfo="setPlayerCard" />
+    <!-- make a hidden div that shows when the result is true from the game object for winner. -->
+    <!-- Bring in the GameFinished as hidden until true? -->
   </div>
 </template>
 

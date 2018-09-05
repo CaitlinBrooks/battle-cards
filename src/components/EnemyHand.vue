@@ -10,7 +10,7 @@
           <img :src="card.img" width="100" height="100">
         </div>
         <div v-else>
-          <img src="../assets/purpleCard.jpg" width="100" height="100">
+          <img src="../assets/modernCard.jpg" width="150" height="200">
         </div>
       </div>
     </div>

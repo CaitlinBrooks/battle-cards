@@ -9,6 +9,7 @@
     <div v-else>
       <h2>Battle Cats Tied!</h2>
     </div>
+  </div>
 </template>
 
 <script>
@@ -16,7 +17,7 @@
     name: "gameFinished",
     computed: {
       game() {
-        return this.$store.state.game
+        return this.$store.state.game;
       }
     }
   }
